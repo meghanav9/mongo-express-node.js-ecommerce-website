@@ -1,0 +1,15 @@
+<% include partials/header %>
+<div style="text-align: center;list-style: none;">
+    <h1>Please Click on Login!</h1>
+    
+        <% if(!currentUser){ %>
+                            <li><h2><a href="/login">Login</a></h2></li>
+                            <li><h2><a href="/register">Sign Up</a></h2></li>   
+        <% } else { %>
+                            <li> <h2>Signed In as <%= currentUser.username %></h2></li>
+                            <li><h2><a href="/logout">Logout</a></h2></li>  
+        <% } %>
+        <h2><a href= "/products"> View all products</a></h2>
+</div>
+<% include partials/footer %>
+

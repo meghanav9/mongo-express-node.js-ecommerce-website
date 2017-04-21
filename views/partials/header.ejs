@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Make site responsive on mobile/tablet -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Anil Electronics</title>
+        <!--<link rel ="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheet/main.css">
+        <!--<link rel="stylesheet" href="/stylesheet/bootstrap-3.3.7-dist/bootstrap-3.3.7-dist/css/bootstrap.min.css">-->
+        <!--<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+        
+    </head>
+    <body>
+     <header role="banner" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid"> 
+            <div class="navbar-header" >
+                <button type="button" class="navbar-toggle pull-left" data-toggle="collapse-side" data-target=".side-collapse" data-target-2=".mynavbar">
+                   <span class="sr-only">Toggle navigation</span> 
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a href="/products" class="navbar-brand"><img src="/images/logo7_edited.jpg" width="300px"/></a>
+            </div>
+            <div class="navbar-default side-collapse in">
+                <nav role="navigation" class="navbar-collapse">
+            <!-- <div class="collapse navbar-collapse"  id="mynavbar"> -->
+                <ul  class="nav navbar-nav navbar-right" >
+                     <li class="<%= typeof page !== 'undefined' && page === 'landing' ? 'active' : '' %>"><a href="/">Home</a></li>
+                     <li class="<%= typeof page !== 'undefined' && page === 'aboutUs' ? 'active' : '' %>"><a href="/aboutus">About us</a></li>
+                     <li class="dropdown" class="<%= typeof page !== 'undefined' && page === 'products' ? 'active' : '' %>">
+                         <a href="/products" class="dropdown-toggle" data-toggle="dropdown">Products<b class="caret"></b></a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li id="link1"><a href="/products">TV/Audio/Video</a></li>
+                            <li id="link2"><a href="/products/#Appliances">Appliances</a></li>
+                            <li id="link3"><a href="/products/#Mobile-Video-Games">Mobile/Video Games</a></li>
+                        </ul>    
+                     </li>
+                     <li class="<%= typeof page !== 'undefined' && page === 'gallery' ? 'active' : '' %>"><a href="/gallery">Events</a></li> 
+                     <li class="<%= typeof page !== 'undefined' && page === 'contactUs' ? 'active' : '' %>"><a href="/contactus">Contact us</a></li>
+                     <% if(currentUser){ %>
+                        <li><a href="#">Signed In As <%= currentUser.username %></a></li>
+                         <li><a href="/logout">Logout</a></li> 
+                    <% }    %>
+                </ul>
+                </nav>
+            </div>    
+        </div>    
+    </header> 

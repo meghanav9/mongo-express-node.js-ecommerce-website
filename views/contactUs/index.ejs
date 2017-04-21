@@ -1,0 +1,143 @@
+<% include ../partials/header %>
+
+<div class="container-fluid  mynavbar">
+    <h3>
+        <% if(success && success.length >0){ %> 
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+        <% if(error && error.length >0){ %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+    </h3>
+<!--<div class="col-md-9">-->
+   <div class="thumbnail">
+    <div class="img-responsive" id="map"></div>
+      <div class="caption-full">
+          <p class="lead"><h1 class="underline"><span>Anil Electronics</span></h1></p>
+          <div class="address-details">
+             <p id="contactAddress">#1-8-598, Balasamudram, Nakkalagutta<br>
+                Hanamkonda, Warangal<br>
+                Telangana 506001, India<br>
+                Phone: <a href="tel:+91 8702445353">+91 870 244 5353</a><br>
+                Mobile: <a href="tel:+91 9866005178">+91 9866005179</a><a href="tel:+91 9866005184"> +91 9866005184</a><br>
+                Email: <a href= mailto:aehnk9@gmail.com>aehnk@ae.com</a>
+              </p>
+          </div>    
+      </div>
+    </div>  
+
+    <!--contact us form-->
+        <div >
+            <div class="contactForm">
+                <form action="/contactus" name='contactus' id='contactus' method="POST" class="row">
+                    <div>
+                        <div class="form-group" >
+                          <div class="col-sm-6">
+                            <input class="form-control" placeholder="Type your name" type="text" value="" name="name" id="name" required>
+                          </div>
+                          <div class="col-sm-6">
+                            <input class="form-control" placeholder="Type your email" type="email" name="email" value="" id="email" required>
+                          </div>
+                        </div>
+                    </div>
+                    <div>
+                         <div class="form-group" >
+                          <div class="col-sm-12">
+                            <textarea class="form-control" row="5" cols="60" placeholder="Type your message..." name="message" id="message" required></textarea>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="col-l-6 text-center" > 
+                        <!--<input class="form-control" name="submit" id="submit" value="Send" type="submit">-->
+                          <button id="submit" name="submit" class="btn btn-primary btn-lg">Send message!</button> 
+                    </div>
+                </form>   
+            </div>
+        </div>
+</div>   
+
+<style>
+.contactForm{
+    padding-top: 10px;
+    padding-left: 10px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.form-control{
+/*    display:inline;*/
+    line-height:1.5em;
+    padding-left: 10px;
+    padding: 26px 16px 6px 16px;
+    height: auto;
+    margin-bottom: 15px;
+        
+}
+.form-control{
+    font-size:1.5em;
+    padding: 14px;
+    height: auto;
+    outline: none;
+    box-shadow: inset 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid #D9D9D9;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+#formButton{
+    padding:10px 35px;
+    font-size:1.9em;
+}
+.underline>span {
+    font-family: "proxima-nova","helvetica","arial","sans";
+	font-size: 30px;
+	font-weight: 700;
+    color: rgba(57, 50, 52, 0.86);
+    /*margin-bottom: .75em;*/
+    display: inline-block;
+    border-bottom: 3px solid #231f20;
+    line-height: 1em;
+    letter-spacing: .135em;
+    padding-bottom: .125em;
+    text-transform: uppercase;
+} 
+#contactAddress{
+    font-size:20px;
+}
+
+</style>
+<script>
+  function initMap() {
+    var lat = 18.003732;
+    var lng = 79.557141;
+    var center = {lat: lat, lng: lng };
+    var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 17,
+        center: center,
+        scrollwheel: false
+    });
+    var contentString = '<div jstcache="33" class="poi-info-window gm-style"> <div jstcache="2"> <div jstcache="3" class="title full-width" jsan="7.title,7.full-width">Anil Electronics</div> <div class="address"> <div jstcache="4" jsinstance="0" class="address-line full-width" jsan="7.address-line,7.full-width">#1-8-598, Warangal-Hyderabad Road, Nakkalagutta</div><div jstcache="4" jsinstance="1" class="address-line full-width" jsan="7.address-line,7.full-width">Balasamudram</div><div jstcache="4" jsinstance="2" class="address-line full-width" jsan="7.address-line,7.full-width">Hanamkonda, Telangana 506001</div><div jstcache="4" jsinstance="*3" class="address-line full-width" jsan="7.address-line,7.full-width">India</div> </div> </div> <div jstcache="5" style="display:none"></div> <div class="view-link"> <a target="_blank" jstcache="6" href="https://maps.google.com/maps?ll=18.003779,79.557138&amp;z=20&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3&amp;cid=14314090091234715094"> <span> View on Google Maps </span> </a> </div> </div>';
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+    var marker = new google.maps.Marker({
+        position: center,
+        map: map
+    });
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+  }
+  $(function () {
+        $("#map").css("height", $(window).height());
+    });
+  
+</script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?AIzaSyDIJFUV9WRplqXK09C11NDQSXxWXOHimQk&callback=initMap"></script>
+
+<% include ../partials/footer %>

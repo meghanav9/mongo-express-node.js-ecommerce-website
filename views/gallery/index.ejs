@@ -1,0 +1,83 @@
+<% include ../partials/header %>
+
+<div class="container-fluid mynavbar">
+  <div id="carousel-slider" class="carousel slide" data-ride="carousel" data-interval="4000">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-slider" data-slide-to="1"></li>
+      <li data-target="#carousel-slider" data-slide-to="2"></li>
+      <li data-target="#carousel-slider" data-slide-to="3"></li>
+      <li data-target="#carousel-slider" data-slide-to="4"></li>
+      <li data-target="#carousel-slider" data-slide-to="5"></li>
+    </ol>
+   
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <div class="slider-size">
+        <img src="/images/20161130_213452.jpg" style="height: 100%;">
+        <div class="carousel-caption">
+        	<h3>Diwali'16 Luckydraw </h3>
+        </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="slider-size">
+        <img src="/images/20151102_190950.jpg" style="height: 100%;">
+        </div>
+      </div>
+      <div class="item">
+        <div class="slider-size">
+        <img src="/images/20151207_154240.jpg" style="height: 100%;">
+        </div>
+      </div>
+      <div class="item">
+        <div class="slider-size">
+        <img src="/images/20151207_193147.jpg" style="height: 100%;">
+        </div>
+      </div>
+      <div class="item">
+        <div class="slider-size">
+        <img src="/images/20151207_193218.jpg" style="height: 100%;">
+        </div>
+      </div>
+      <div class="item">
+        <div class="slider-size">
+        <img src="/images/20151207_193244.jpg" style="height: 100%;">
+        </div>
+      </div>
+    </div> <!-- Wrapper for slides -->
+   
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-slider" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-slider" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div> <!-- Carousel slider-->
+</div> <!--container -->
+<!--script in footer-->
+<style>
+/* tablets */
+@media (max-width: 991px) and (min-width: 400px) {
+    .slider-size {
+        height: 400px;
+    }
+    .slider-size > img {
+        width: 100%;
+    }
+}
+  /* desktops */
+@media (min-width: 992px) {
+    .slider-size {
+        height: 700px;
+    }
+    .slider-size > img {
+        width: 100%;
+    }
+}
+</style>
+
+<% include ../partials/footer %>

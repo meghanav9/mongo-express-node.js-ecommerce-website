@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">AnilElectronics</p>
+            <div class="list-group">
+                <li class="list-group-item"><a href="/products/#TV-Audio-Video">TV/Audio/Video</a></li>
+                <li class="list-group-item"><a href="/products/#Appliances">Appliances</a></li>
+                <li class="list-group-item"><a href="/products/#Mobile-Video-Games">Mobile/Video Games</a></li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= product.image %>">
+                <div class="caption-full">
+                    <h4><a><%=product.name%></a></h4>
+                    <p><%= product.description %></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/footer %>

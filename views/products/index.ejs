@@ -1,0 +1,152 @@
+<% include ../partials/header %>
+<style>
+.thumbnail img {
+    height: 200px;
+}
+</style>
+    <div class="container-fluid mynavbar">
+          <div id="carousel-slider" class="carousel slide" data-ride="carousel" data-interval="4000">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+              <li data-target="#carousel-slider" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-slider" data-slide-to="1"></li>
+              <li data-target="#carousel-slider" data-slide-to="2"></li>
+              <li data-target="#carousel-slider" data-slide-to="3"></li>
+              <li data-target="#carousel-slider" data-slide-to="4"></li>
+              <li data-target="#carousel-slider" data-slide-to="5"></li>
+            </ol>
+           
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                
+              <div class="item active">
+                <div class="slider-size">
+                    <img src="/images/FullSizeRender_1.jpg" style="height: 100%;" />
+                </div>  
+                <!--<img src="/images/lg2017press-1ledited.jpg" style="height: 100%;" alt="...">-->
+                <!--<div class="carousel-caption">-->
+                <!--	<h3>Caption Text</h3>-->
+                <!--</div>-->
+              </div>
+               <div class="item">
+                <div class="slider-size">  
+                <img src="/images/FullSizeRender_9.jpg" style="height: 100%;" />
+                </div>
+              </div>    
+              <div class="item">
+                <div class="slider-size">  
+                <img src="/images/FullSizeRender_6.jpg" style="height: 100%;" />
+                </div>
+              </div>
+               <div class="item">
+                <div class="slider-size">  
+                <img src="/images/FullSizeRender_8.JPG" style="height: 100%;" />
+                </div>
+              </div>
+              <div class="item">
+                <div class="slider-size">  
+                <img src="/images/FullSizeRender_7.jpg" style="height: 100%;" />
+                </div>
+              </div>
+              <div class="item">
+                <div class="slider-size">  
+                <img src="/images/FullSizeRender.jpg" style="height: 100%;" />
+                </div>
+              </div>
+              
+            </div> <!-- Wrapper for slides -->
+            
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-slider" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#carousel-slider" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+        </div> <!-- Carousel slider-->
+        
+        
+        <div id="TV-Audio-Video">  
+            <div class="heading">
+                <h2 class="head">TV & Audio & Video Player</h2>
+            </div>
+            <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+                <!--below 'product' is a new variable assigned for each product in 'products'-->
+                <% products.forEach(function(tvproduct){ %> 
+                    <% var type1 = tvproduct.type; %>
+                    <% if(type1 === "tvandhometheatre") { %>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="thumbnail">
+                                  <img src="<%= tvproduct.image %>" style="height: 100%;" id="index">
+                                  <div class="caption">
+                                        <h4><%= tvproduct.name %></h4>
+                                  </div>
+                                  <p>
+                                      <a href="/products/<%= tvproduct._id %>" class="btn btn-primary">More Info</a>
+                                  </p>
+                            </div>
+                        </div>
+                    <% } %>    
+                <% }); %>
+                
+            </div>
+        </div>        
+   
+        <div id="Appliances">  
+            <hr>
+            <div class="heading">
+                <h2 class="head">Home & kitchen Appliances</h2>
+            </div>
+            <div class="row text-center" style="display:flex; flex-wrap: wrap;"> 
+                <!--below 'product' is a new variable assigned for each product in 'products'-->
+                <% products.forEach(function(applianceproduct){ %>
+                <% var type2 = applianceproduct.type; %>
+                    <% if(type2 === "appliances") { %>
+                        <div class="col-md-3 col-sm-6">
+                            <div class="thumbnail">
+                                  <img src="<%= applianceproduct.image %>" >
+                                  <div class="caption">
+                                        <h4><%= applianceproduct.name %></h4>
+                                  </div>
+                                  <p>
+                                      <a href="/products/<%= applianceproduct._id %>" class="btn btn-primary">More Info</a>
+                                  </p>
+                            </div>
+                        </div>
+                    <% } %>    
+                <% }); %>
+                
+            </div>
+        </div>
+        
+        <div id="Mobile-Video-Games">  
+            <hr>
+            <div class="heading">
+                <h2 class="head">Mobiles & Video games</h2>
+            </div>
+             <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+                <!--below 'product' is a new variable assigned for each product in 'products'-->
+                <% products.forEach(function(mobileproduct){ %> 
+                    <% var type3 = mobileproduct.type; %>
+                        <% if(type3 === "mobiles") { %>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="thumbnail">
+                                      <img src="<%= mobileproduct.image %>">
+                                      <div class="caption">
+                                            <h4><%= mobileproduct.name %></h4>
+                                      </div>
+                                      <p>
+                                          <a href="/products/<%= mobileproduct._id %>" class="btn btn-primary">More Info</a>
+                                      </p>
+                                </div>
+                            </div>
+                        <% } %>    
+                <% }); %>
+                
+            </div>
+        </div>        
+    
+    </div> <!-- end of container fluid -->
+<!--carousal slider script-->
+
+<% include ../partials/footer %>

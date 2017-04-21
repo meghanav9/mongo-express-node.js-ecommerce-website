@@ -1,0 +1,104 @@
+        <div class="container-fluid mynavbar">
+            <ul id="brandlogos">
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_lg">
+                    <img src="/images/LG.jpg" alt="LG">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_sam">
+                    <img  src="/images/samsung.png" alt="Samsung">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_sony">
+                    <img src="/images/sony_store.jpg" alt="Sony">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_len">
+                    <img src="/images/sharp.png" alt="sharp.">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_len">
+                    <img src="/images/vguard.png" alt="vguard">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_len">
+                    <img src="/images/whirlpool.jpg" alt="whirlpool">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_len">
+                    <img src="/images/siemens-logo.jpg" alt="siemens">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_len">
+                    <img src="/images/symphony.jpg" alt="symphony">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_len">
+                    <img src="/images/Butterflylogo.png" alt="Butterflylogo">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_len">
+                    <img src="/images/preethi.jpg" alt="preethi">
+                    </a>
+                </li> 
+                <li>
+                    <a href="#" class="atag" data-lid="ubr_shp_len">
+                    <img src="/images/micromax.png" alt="micromax">
+                    </a>
+                </li> 
+            </ul>
+         
+            <hr>
+            <dir class="col-md-8 col-sm-8" id="copyright">
+                <p >
+                   <h5>© ANIL ELECTRONICS 2017 |
+                   <a href="/">Home</a> |
+                   <a href="/aboutus">About us</a> |
+                   <a href="/products">Products</a> |
+                   <a href="/gallery">Events</a> |
+                   <a href="/contactus">Contact us</a></h5>
+                </p>
+            </dir>
+            <dir class="col-md-4 col-sm-4" id="websitedeveloper">
+                <p>Developed by <a href= mailto:meghana.vish@gmail.com>Meghana</a></p>  
+            </dir>        
+        </div>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+                <!--jQuery CDN -->
+        <script
+            src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous">
+        </script>
+        <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+        
+        <script>
+
+              $(document).ready(function() {   
+                          var sideslider = $('[data-toggle=collapse-side]');
+                          var sel = sideslider.attr('data-target');
+                          var sel2 = sideslider.attr('data-target-2');
+                          sideslider.click(function(event){
+                              $(sel).toggleClass('in');
+                              $(sel2).toggleClass('out');
+                          });
+              });
+
+        	$('.carousel').carousel({
+        		interval: 3000
+        	})
+        </script>
+    </body>
+</html>
