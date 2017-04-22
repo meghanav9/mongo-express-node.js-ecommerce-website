@@ -16,7 +16,9 @@ var productRoutes = require("./routes/products");
 var indexRoutes = require("./routes/index");
 var contactRoutes = require("./routes/contact");
 
-mongoose.connect("mongodb://localhost/aedb");
+// mongoose.connect("mongodb://localhost/aedb");
+mongoose.connect("mongodb://meghana:aehnk@ds051635.mlab.com:51635/aedb");
+
 // var url = process.env.DATABASEURL || "mongodb://localhost/aedb";
 // mongoose.connect(url);
 
@@ -25,7 +27,7 @@ app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/public"));
 app.use(flash());
 //app.use(Promise);
-seedDB();
+// seedDB();
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
