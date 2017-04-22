@@ -19,6 +19,8 @@ var geocoder = require('geocoder');
 
 var url = process.env.DATABASEURL || "mongodb://localhost/aedb";
 mongoose.connect(url);
+var googleapi =process.env.GOOGLE_API_KEY;
+
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
