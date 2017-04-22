@@ -16,8 +16,8 @@ var productRoutes = require("./routes/products");
 var indexRoutes = require("./routes/index");
 var contactRoutes = require("./routes/contact");
 
-// mongoose.connect("mongodb://localhost/aedb");
-mongoose.connect("mongodb://meghana:aehnk@ds051635.mlab.com:51635/aedb");
+mongoose.connect(process.env.DATABASEURL);
+// mongoose.connect("mongodb://meghana:aehnk@ds051635.mlab.com:51635/aedb");
 
 // var url = process.env.DATABASEURL || "mongodb://localhost/aedb";
 // mongoose.connect(url);
