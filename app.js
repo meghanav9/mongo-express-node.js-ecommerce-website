@@ -16,7 +16,9 @@ var productRoutes = require("./routes/products");
 var indexRoutes = require("./routes/index");
 var contactRoutes = require("./routes/contact");
 
-mongoose.connect("mongodb://localhost/aedb"); //  new db
+var url = process.env.DATABASEURL || "mongodb://localhost/aedb";
+mongoose.connect(url);
+
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname+"/public"));
