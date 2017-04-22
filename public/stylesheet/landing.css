@@ -12,9 +12,8 @@ body {
   text-align: center;
   padding-top: 40vh;
 }
-#landing-header h1 {
+#landing-header h2 {
   color: #fff;
-  font-size: 1.6em;
 }
 .slideshow { 
   position: fixed;
