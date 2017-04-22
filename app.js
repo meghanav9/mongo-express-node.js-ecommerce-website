@@ -15,6 +15,7 @@ var express = require("express"),
 var productRoutes = require("./routes/products");
 var indexRoutes = require("./routes/index");
 var contactRoutes = require("./routes/contact");
+var geocoder = require('geocoder');
 
 var url = process.env.DATABASEURL || "mongodb://localhost/aedb";
 mongoose.connect(url);
