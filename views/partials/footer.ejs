@@ -85,10 +85,6 @@
         <script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
         
         <script>
-            $('.carousel').carousel({
-        		interval: 3000
-        	});
-        	
             $(document).ready(function() {   
                 var sideslider = $('[data-toggle=collapse-side]');
                 var sel = sideslider.attr('data-target');
@@ -98,6 +94,12 @@
                   $(sel2).toggleClass('out');
                 });
             });
+            
+            $('.carousel').carousel({
+        		interval: 3000
+        	});
+        	
+
         </script>
     </body>
 </html>
