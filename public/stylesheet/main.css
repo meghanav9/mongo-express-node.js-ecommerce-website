@@ -379,7 +379,7 @@ body {
     margin: 40px 0;
     margin-bottom: .75em;
     display: inline-block;
-    border-bottom: 3px solid #231f20;
+    border-bottom: 3px solid rgba(57, 50, 52, 0.86);
     line-height: 1em;
     letter-spacing: .090em;
     padding-bottom: .090em;
@@ -418,3 +418,39 @@ blockquote{
        
 }
 /*end of aboutUs page css*/
+/*css for contatcus page*/
+.contactForm{
+    padding-top: 10px;
+    padding-left: 10px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.form-control{
+/*    display:inline;*/
+    line-height:1.5em;
+    padding-left: 10px;
+    padding: 26px 16px 6px 16px;
+    height: auto;
+    margin-bottom: 15px;
+        
+}
+.form-control{
+    font-size:1em;
+    padding: 14px;
+    height: auto;
+    outline: none;
+    box-shadow: inset 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid #D9D9D9;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+#formButton{
+    padding:10px 35px;
+    font-size:1em;
+}
+#contactAddress{
+    font-size:1em;
+}
+/*end of - css for contatcus page*/

@@ -1,7 +1,7 @@
 <% include ../partials/header %>
 
 <div class="container  mynavbar">
-    <h3>
+    <h4>
         <% if(success && success.length >0){ %> 
             <div class="alert alert-success" role="alert">
                 <%= success %>
@@ -12,7 +12,7 @@
                 <%= error %>
             </div>
         <% } %>
-    </h3>
+    </h4>
 <!--<div class="col-md-9">-->
    <div class="thumbnail">
     <div class="img-responsive" id="map"></div>
@@ -60,57 +60,6 @@
             </div>
         </div>
 </div>   
-
-<style>
-.contactForm{
-    padding-top: 10px;
-    padding-left: 10px;
-    max-width: 100%;
-    margin-bottom: 15px;
-}
-.form-control{
-/*    display:inline;*/
-    line-height:1.5em;
-    padding-left: 10px;
-    padding: 26px 16px 6px 16px;
-    height: auto;
-    margin-bottom: 15px;
-        
-}
-.form-control{
-    font-size:1em;
-    padding: 14px;
-    height: auto;
-    outline: none;
-    box-shadow: inset 1px 2px 0 rgba(0, 0, 0, 0.06);
-    border: 1px solid #D9D9D9;
-}
-.row {
-    margin-right: -15px;
-    margin-left: -15px;
-}
-#formButton{
-    padding:10px 35px;
-    font-size:1em;
-}
-.underline>span {
-    font-family: "proxima-nova","helvetica","arial","sans";
-	font-size: 1em;
-	font-weight: 700;
-    color: rgba(57, 50, 52, 0.86);
-    /*margin-bottom: .75em;*/
-    display: inline-block;
-    border-bottom: 3px solid #231f20;
-    line-height: 1em;
-    letter-spacing: .135em;
-    padding-bottom: .125em;
-    text-transform: uppercase;
-} 
-#contactAddress{
-    font-size:1em;
-}
-
-</style>
 <script>
   function initMap() {
     var lat = 18.003732;
@@ -132,11 +81,10 @@
     marker.addListener('click', function() {
       infowindow.open(map, marker);
     });
-  
-  $(function () {
-        $("#map").css("height", $(window).height());
-    });
   }
+ $(function () {
+        $("#map").css("height", $(window).height());
+ });
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBumqQuuhEJxOuZfnrsZQVQS-7JjKQPaBA&callback=initMap" type="text/javascript">
 </script>
