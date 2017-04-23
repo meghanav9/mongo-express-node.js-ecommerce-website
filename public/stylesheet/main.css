@@ -15,9 +15,7 @@ body {
 }
 
 .container {
-  /*max-width: 1400px;*/
   background-color:#ffffff;
-  /*padding-top:65px;*/
   font-size: 1em;
 }
 
@@ -469,16 +467,16 @@ blockquote{
     width: auto;
     /*height: auto;*/
     opacity: 1;
-  
 }
 #copyright{
-    font-size:0.5em;
+    font-size:0.6em;
+    text-align:left;
 }
 @media (min-width:992px) {
     #copyright{
         font-size:0.7em;
     }
-}    
+}   
 #websitedeveloper{
     font-weight:bold;
     text-align:right;
