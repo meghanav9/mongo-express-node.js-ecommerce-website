@@ -21,9 +21,9 @@ body {
   font-size: 1em;
 }
 
-/*.dropdown-toggle{*/
-/*     display: none;   */
-/*}*/
+.dropdown-toggle{
+     display: none;   
+}
 
 .dropdown:hover .dropdown-menu {
     display: block;
@@ -129,13 +129,14 @@ body {
   background-color: grey;
 }
 .icon-bar {
-  background-color:grey ;
+  background-color: grey ;
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
   border: none!important;             /*edited*/
 }
 
+/* mobile mode - side collapse css*/
 @media (max-width: 767px) {
     .side-collapse{
      background:#fffffa; 
@@ -171,6 +172,10 @@ body {
         /*padding-top:7px;*/
     }  
 }
+/* end of mobile mode - side collapse css*/
+
+
+/*tablet mode- reducing brand logo size */
 @media (min-width: 768px) and (max-width:991px) {
      .navbar-default{
         font-size: 1.1em;
@@ -183,7 +188,9 @@ body {
         font-size: 1.1em;
     }
 }
+/*end of tablet mode- reducing brand logo size */
 
+/* dropdown hover enable disabled css*/
 @media (max-width: 768px) {
    .dropdown-menu {
         display: none !important;
@@ -203,11 +210,12 @@ body {
     
   }
 }
+/* end of dropdown hover enable disabled css*/
 
-.navbar-toggle.navbar-left {
-  float: left;
+/*.navbar-toggle.navbar-left {*/
+/*  float: left;*/
   /*margin-left: 10px;*/
-}
+/*}*/
 /*end of navbar*/
 
 
@@ -265,7 +273,7 @@ body {
 /*end-thumbail*/
 
 
-
+/*css for products shows.ejs */
 .heading{
     background: rgba(186, 189, 139, 0.2);
     color: #49494a;
@@ -284,57 +292,8 @@ body {
     padding: 20px 0 20px 0;
     border-bottom: 0;
 }
+/*end of css for products shows.ejs */
 
-
-/* Google Maps */
-#map {
-    height: 400px;
-    width: 100%;
-}
-
-
-/*footer*/
-#brandlogos{
-	list-style: none;
-    margin: 30px 0 20px 0;
-    padding: 5px 0;
-    border-top: 1px solid #dbdcdc;
-    border-bottom: 1px solid #dbdcdc;
-    text-align: center;
-    box-sizing: border-box;
-    display: block;
-    line-height: 2.5;
-    background-color:#fff;
-}
-#brandlogos li{
-    display: inline-block;
-    text-align: -webkit-match-parent;
-    line-height: 1.5;
-}
-.atag{
-	margin-left: 0;
-	width: 55px;
-    height: 35px;
-    margin-left: 25px;
-    display: inline-block;
-}
-.atag img{
-	max-width: 100%;
-    /*max-height: 100%;*/
-    width: auto;
-    /*height: auto;*/
-    opacity: 1;
-  
-}
-#copyright{
-    font-size:0.5em;
-}
-#websitedeveloper{
-    font-weight:bold;
-    text-align:right;
-}
-
-/*ends - footer */
 
 
 /* slide - navbar */
@@ -369,6 +328,8 @@ body {
 /* Ends - slide - navbar */
 
 
+
+
 /*aboutUs page css*/
 .underline>span {
     font-family: "proxima-nova","helvetica","arial","sans";
@@ -379,7 +340,7 @@ body {
     margin: 40px 0;
     margin-bottom: .75em;
     display: inline-block;
-    border-bottom: 3px solid #231f20;
+    border-bottom: 3px solid rgba(57, 50, 52, 0.86);
     line-height: 1em;
     letter-spacing: .090em;
     padding-bottom: .090em;
@@ -418,3 +379,109 @@ blockquote{
        
 }
 /*end of aboutUs page css*/
+
+
+/*css for contatcus page*/
+.contactusunderline>span {
+    font-family: "proxima-nova","helvetica","arial","sans";
+	font-size: 1em;
+	font-weight: 700;
+    color: rgba(57, 50, 52, 0.86);
+    /*margin-bottom: .75em;*/
+    display: inline-block;
+    border-bottom: 3px solid  rgba(57, 50, 52, 0.86);
+    line-height: 1em;
+    letter-spacing: .090em;
+    padding-bottom: .090em;
+    text-transform: uppercase;
+}
+/* Google Maps */
+#map {
+    height: 400px;
+    width: 100%;
+}
+.contactForm{
+    padding-top: 10px;
+    padding-left: 10px;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+.form-control{
+/*    display:inline;*/
+    line-height:1.5em;
+    padding-left: 10px;
+    padding: 26px 16px 6px 16px;
+    height: auto;
+    margin-bottom: 15px;
+        
+}
+.form-control{
+    font-size:1em;
+    padding: 14px;
+    height: auto;
+    outline: none;
+    box-shadow: inset 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border: 1px solid #D9D9D9;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+#formButton{
+    padding:10px 35px;
+    font-size:1em;
+}
+#contactAddress{
+    font-size:1em;
+}
+/*end of - css for contatcus page*/
+
+
+
+/*footer*/
+#brandlogos{
+	list-style: none;
+    margin: 30px 0 20px 0;
+    padding: 5px 0;
+    border-top: 1px solid #dbdcdc;
+    border-bottom: 1px solid #dbdcdc;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    line-height: 2.5;
+    background-color:#fff;
+}
+#brandlogos li{
+    display: inline-block;
+    text-align: -webkit-match-parent;
+    line-height: 1.5;
+}
+.atag{
+	margin-left: 0;
+	width: 55px;
+    height: 35px;
+    margin-left: 25px;
+    display: inline-block;
+}
+.atag img{
+	max-width: 100%;
+    /*max-height: 100%;*/
+    width: auto;
+    /*height: auto;*/
+    opacity: 1;
+  
+}
+#copyright{
+    font-size:0.5em;
+}
+@media (min-width:992px) {
+    #copyright{
+        font-size:0.7em;
+    }
+}    
+#websitedeveloper{
+    font-weight:bold;
+    text-align:right;
+}
+
+/*ends - footer */
