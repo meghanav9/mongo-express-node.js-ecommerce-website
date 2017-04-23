@@ -82,22 +82,23 @@
             integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
             crossorigin="anonymous">
         </script>
-        <script src='https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
+        <script src='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js'></script>
         
         <script>
-            $('.carousel').carousel({
+
+              $(document).ready(function() {   
+                          var sideslider = $('[data-toggle=collapse-side]');
+                          var sel = sideslider.attr('data-target');
+                          var sel2 = sideslider.attr('data-target-2');
+                          sideslider.click(function(event){
+                              $(sel).toggleClass('in');
+                              $(sel2).toggleClass('out');
+                          });
+              });
+
+        	$('.carousel').carousel({
         		interval: 3000
-        	});
-        	
-            $(document).ready(function() {   
-                var sideslider = $('[data-toggle=collapse-side]');
-                var sel = sideslider.attr('data-target');
-                var sel2 = sideslider.attr('data-target-2');
-                sideslider.click(function(event){
-                  $(sel).toggleClass('in');
-                  $(sel2).toggleClass('out');
-                });
-            });
+        	})
         </script>
     </body>
 </html>

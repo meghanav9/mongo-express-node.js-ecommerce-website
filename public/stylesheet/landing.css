@@ -1,7 +1,7 @@
 body {
   background-color: #000;
 }
-/*position the welcome text and view all campgrounds buton*/
+/*position the welcome text and view all products button*/
 #landing-header {
   font-family: "proxima-nova","helvetica","arial","sans";
 	font-size: 30px;
@@ -12,9 +12,8 @@ body {
   text-align: center;
   padding-top: 40vh;
 }
-#landing-header h1 {
-  color: #fff;
-  font-size: 1.6em;
+#landing-header h2 {
+  color: #ffffff;
 }
 .slideshow { 
   position: fixed;

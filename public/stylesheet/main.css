@@ -169,7 +169,7 @@ body {
   }
     .navbar-brand img{
         width:200px;
-        /*padding-top:7px;*/
+        padding-top:7px;
     }  
 }
 /* end of mobile mode - side collapse css*/
@@ -182,7 +182,7 @@ body {
     }
     .navbar-brand img{
         width:200px;
-        padding-top:7px;
+        padding-top:9px;
     }
     .navbar-default .navbar-nav .dropdown-menu > li{
         font-size: 1.1em;
@@ -222,7 +222,7 @@ body {
 /*carousal slider css*/
 @media (max-width: 767px) {
     .slider-size {
-        height: 200px;
+        height: 300px;
     }
     .slider-size > img {
          width: 100%;
@@ -312,7 +312,7 @@ body {
                 left:200px;
             }
             .side-collapse {
-                top:68px;
+                top:63px;
                 bottom:0;
                 left:0;
                 width:300px;
